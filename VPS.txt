@@ -1,1 +1,2 @@
+https://raw.githubusercontent.com/mbelspb-gif/-/refs/heads/main/VPS.txt
 vless://9ef0cf20-a8ca-Fade-a510-23b5157a2569@37.9.4.82:443?mode=gun&security=reality&encryption=none&authority=&pbk=o6jbbDkNF_5v8BlkIDl4NKhBiXTxCGms-NPmFkuQNXA&fp=qq&allowinsecure=0&type=grpc&serviceName=&sni=ads.x5.ru#%F0%9F%87%B7%F0%9F%87%BA+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F+24
