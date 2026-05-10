@@ -85,7 +85,7 @@
             "settings": {
                 "vnext": [
                     {
-                        "address": "144.31.47.56",
+                        "address": "158.160.216.62",
                         "port": 5443,
                         "users": [
                             {
@@ -103,9 +103,9 @@
                 "realitySettings": {
                     "allowInsecure": false,
                     "fingerprint": "chrome",
-                    "publicKey": "Sej8HxV0t3wxhyz6ol--mnl1JP3kRhzSuMlYuvzaCwI",
-                    "serverName": "www.nvidia.com",
-                    "shortId": "74a8b5148033ab",
+                    "publicKey": "m4nwOat-CKbfjlIFz8MTjO9VU0oFIzQAQAq7BpIm3Vo",
+                    "serverName": "cloudcdn-m9-15.cdn.yandex.net",
+                    "shortId": "78b2",
                     "show": false,
                     "spiderX": "/"
                 },
@@ -155,7 +155,7 @@
             "statsOutboundUplink": true
         }
     },
-    "remarks": "🇫🇮 Финляндия-2 | tg @scalavpn",
+    "remarks": "🇪🇺 LTE-3 | tg @scalavpn",
     "routing": {
         "domainStrategy": "IPIfNonMatch",
         "rules": [
@@ -191,4 +191,3 @@
     "stats": {
     }
 }
-
