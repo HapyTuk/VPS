@@ -2311,3 +2311,196 @@ trojan://K-F4bw_38Vq3kLXn911d_vyoTNv_jBJy@109.120.190.132:7443?type=tcp&headerTy
 trojan://K-F4bw_38Vq3kLXn911d_vyoTNv_jBJy@109.120.190.146:8443?type=tcp&headerType=none&security=tls&encryption=none&sni=pl.serverstats.ru&fp=chrome&alpn=h2%2Chttp%2F1.1&insecure=0#🇪🇺TG:SEIT099%F0%9F%87%B5%F0%9F%87%B1%20%20%5B%2A%5D%20
 trojan://K-F4bw_38Vq3kLXn911d_vyoTNv_jBJy@87.239.104.97:7443?type=tcp&headerType=none&security=tls&encryption=none&sni=plthree.rushtaxi.ru&fp=chrome&alpn=h2%2Chttp%2F1.1&insecure=0#🇪🇺TG:SEIT099%F0%9F%87%B5%F0%9F%87%B1%20%20%5B%2A%5D%20
 trojan://K-F4bw_38Vq3kLXn911d_vyoTNv_jBJy@87.239.104.97:8443?type=tcp&headerType=none&security=tls&encryption=none&sni=pltwo.rushtaxi.ru&fp=chrome&alpn=h2%2Chttp%2F1.1&insecure=0#🇪🇺TG:SEIT099%F0%9F%87%B5%F0%9F%87%B1%20%20%5B%2A%5D%20
+{
+    "dns": {
+        "hosts": {
+            "domain:googleapis.cn": "googleapis.com"
+        },
+        "queryStrategy": "UseIPv4",
+        "servers": [
+            "1.1.1.1",
+            {
+                "address": "1.1.1.1",
+                "domains": [
+                ],
+                "port": 53
+            },
+            {
+                "address": "8.8.8.8",
+                "domains": [
+                ],
+                "port": 53
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ],
+                "enabled": true
+            },
+            "tag": "socks"
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 10809,
+            "protocol": "http",
+            "settings": {
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ],
+                "enabled": true
+            },
+            "tag": "http"
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 11111,
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "127.0.0.1"
+            },
+            "tag": "metrics_in"
+        }
+    ],
+    "log": {
+        "loglevel": "warning"
+    },
+    "metrics": {
+        "tag": "metrics_out"
+    },
+    "outbounds": [
+        {
+            "mux": {
+                "concurrency": -1,
+                "enabled": false,
+                "xudpConcurrency": 8,
+                "xudpProxyUDP443": ""
+            },
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "158.160.216.62",
+                        "port": 5443,
+                        "users": [
+                            {
+                                "encryption": "mlkem768x25519plus.native.0rtt.AESuZ0uzJOu9-U-b-N0ZNUAfUGkj5tcgCAjTKOfEmR8",
+                                "id": "bddfd0d8-2bed-42e3-8016-f56a2146427f",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "allowInsecure": false,
+                    "fingerprint": "chrome",
+                    "publicKey": "m4nwOat-CKbfjlIFz8MTjO9VU0oFIzQAQAq7BpIm3Vo",
+                    "serverName": "cloudcdn-m9-15.cdn.yandex.net",
+                    "shortId": "78b2",
+                    "show": false,
+                    "spiderX": "/"
+                },
+                "security": "reality",
+                "tcpSettings": {
+                    "header": {
+                        "type": "none"
+                    }
+                }
+            },
+            "tag": "proxy"
+        },
+        {
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "UseIP"
+            },
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {
+                "response": {
+                    "type": "http"
+                }
+            },
+            "tag": "block"
+        }
+    ],
+    "policy": {
+        "levels": {
+            "0": {
+                "statsUserDownlink": true,
+                "statsUserUplink": true
+            },
+            "8": {
+                "connIdle": 300,
+                "downlinkOnly": 1,
+                "handshake": 4,
+                "uplinkOnly": 1
+            }
+        },
+        "system": {
+            "statsInboundDownlink": true,
+            "statsInboundUplink": true,
+            "statsOutboundDownlink": true,
+            "statsOutboundUplink": true
+        }
+    },
+    "remarks": "🇪🇺 LTE-3 | tg @scalavpn",
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "inboundTag": [
+                    "metrics_in"
+                ],
+                "outboundTag": "metrics_out"
+            },
+            {
+                "inboundTag": [
+                    "socks"
+                ],
+                "outboundTag": "proxy",
+                "port": "53"
+            },
+            {
+                "ip": [
+                    "1.1.1.1"
+                ],
+                "outboundTag": "proxy",
+                "port": "53"
+            },
+            {
+                "ip": [
+                    "8.8.8.8"
+                ],
+                "outboundTag": "direct",
+                "port": "53"
+            }
+        ]
+    },
+    "stats": {
+    }
+}
