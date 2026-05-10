@@ -2311,6 +2311,7 @@ trojan://K-F4bw_38Vq3kLXn911d_vyoTNv_jBJy@109.120.190.132:7443?type=tcp&headerTy
 trojan://K-F4bw_38Vq3kLXn911d_vyoTNv_jBJy@109.120.190.146:8443?type=tcp&headerType=none&security=tls&encryption=none&sni=pl.serverstats.ru&fp=chrome&alpn=h2%2Chttp%2F1.1&insecure=0#🇪🇺TG:SEIT099%F0%9F%87%B5%F0%9F%87%B1%20%20%5B%2A%5D%20
 trojan://K-F4bw_38Vq3kLXn911d_vyoTNv_jBJy@87.239.104.97:7443?type=tcp&headerType=none&security=tls&encryption=none&sni=plthree.rushtaxi.ru&fp=chrome&alpn=h2%2Chttp%2F1.1&insecure=0#🇪🇺TG:SEIT099%F0%9F%87%B5%F0%9F%87%B1%20%20%5B%2A%5D%20
 trojan://K-F4bw_38Vq3kLXn911d_vyoTNv_jBJy@87.239.104.97:8443?type=tcp&headerType=none&security=tls&encryption=none&sni=pltwo.rushtaxi.ru&fp=chrome&alpn=h2%2Chttp%2F1.1&insecure=0#🇪🇺TG:SEIT099%F0%9F%87%B5%F0%9F%87%B1%20%20%5B%2A%5D%20
+
 {
     "dns": {
         "hosts": {
